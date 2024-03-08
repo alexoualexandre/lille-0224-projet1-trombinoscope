@@ -1,17 +1,125 @@
 * {
     box-sizing: border-box;
-
 }
 
 body {
     margin: 0px;
 }
 
-a {text-decoration: none;
-    color: inherit;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.container-button{
+header {
+    width: 100%;
+    height: 50%;
+    position: relative;
+
+}
+
+.logo {
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    top: 5%;
+}
+
+.header_logo {
+    background-color: #FA006A;
+    width: 100%;
+    height: 50%;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 1.5em;
+    font-family: arial;
+
+}
+
+header p {
+    text-align: center;
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* ------------------------------ POPUP CARD ------------------------------ */
+
+.container-card {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #FA006A;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    display: none;
+}
+
+.card-profil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* border: #FFF 2px solid; */
+    color: #f43082;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    margin-top: 3rem;
+}
+
+.card-profil h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.card-profil span {
+    color: #000;
+}
+
+
+.picture-card img {
+    border: #FFF solid 3px;
+    border-radius: 50%;
+    margin-top: -6rem;
+    width: 11rem;
+}
+
+.lastjob-card,
+.hobbie-card {
+    font-style: italic;
+}
+
+.button-exit {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-top: 2rem;
+    font-weight: 600;
+}
+
+.button-exit:hover,
+.button-exit:focus {
+    background-color: #fff;
+}
+
+/* ------------------------------ BUTTON NAV ------------------------------ */
+
+.container-button {
     display: flex;
     flex-direction: column;
     align-items: center;
