@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    margin: 0%;
+    padding: 0;
 }
 
 body {
@@ -171,4 +173,30 @@ header p {
 .container-button button:active {
   box-shadow: rgba(45, 35, 66, .3) 0 3px 7px inset;
   transform: translateY(2px);
+}
+
+/* ------------------------------ SECTION TROMBINOSCOPE ------------------------------ */
+
+.container-profil {
+    position: relative;
+    background-color:#fa006a ;
+}
+
+.staff-profil {
+    width:100% ;
+    height:33.33%;
+}
+
+.img {
+    width:10em;
+    height: 10em;
+    margin-left: 27.5%;
+    margin-top: 8%;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.h1staff {
+    text-align: center;
+    color:white;
 }
