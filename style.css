@@ -6,6 +6,7 @@
 
 html {
     scroll-behavior: smooth;
+
 }
 
 body {
@@ -234,8 +235,15 @@ header p {
 }
 
 .container-button button:active {
-    box-shadow: rgba(45, 35, 66, .3) 0 3px 7px inset;
-    transform: translateY(2px);
+  box-shadow: rgba(45, 35, 66, .3) 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.container-button .dev {
+    background-image: radial-gradient(100% 100% at 100% 0, #a306b6 0, #a306b6 100%);
+}
+.container-button .data {
+    background-image: radial-gradient(100% 100% at 100% 0, #2567ef 0, #2567ef 100%);
 }
 
 /* ------------------------------ SECTION TROMBINOSCOPE ------------------------------ */
@@ -261,5 +269,43 @@ header p {
 
 .h1staff {
     text-align: center;
+    color:white;
+}
+
+/* ------------------------------ FOOTER ------------------------------ */
+
+footer{
+    margin-block: 0.8rem;
+    margin-inline: 0.8rem;
+
+}
+
+.footer-title {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    font-family: arial;
+    margin-bottom: 0.5rem;
+}
+
+.social-logo {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 0.6rem;
+
+}
+
+.social-logo a{
+    border-radius: 20%;
+    background-color: #fa006a;
+}
+
+footer p {
+    display: flex;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 0.8rem;
+    justify-content: center;
+}
+
     color: white;
 }
