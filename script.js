@@ -10,8 +10,9 @@ setInterval(function () {
     })
 }, 10);
 
-let directionContainer = document.querySelector("#direction .profil-container")
-let otherContainer = document.querySelector("#other .profil-container")
+// CREATION DES PROFILS
+
+let directionContainer = document.querySelector(".staff .container-profil")
 
 let directionProfil = [
     {id: "0", srcPicture: "img/profil0.jpg", firstname: "Tom", lastname: "Monteil", function: "Owner", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quis doloremque cumque, quos natus necessitatibus rerum eveniet voluptatum aperiam eum deserunt quae commodi, in magnam repellendus voluptatibus aut, deleniti omnis."},
@@ -30,7 +31,7 @@ let otherProfil = [
     {id: "6", srcPicture: "img/profil10.jpg", firstname: "Vincent", lastname: "Truchon", function: "R&D Manager", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quis doloremque cumque, quos natus necessitatibus rerum eveniet voluptatum aperiam eum deserunt quae commodi, in magnam repellendus voluptatibus aut, deleniti omnis."}
 ]
 
-function createProfil(sector, id, srcPicture, firstname, lastname, post) {
+function createProfil(sector, id, srcPicture, firstname, lastname) {
     let newProfil = document.createElement("div")
     newProfil.classList.add("profil")
     sector.appendChild(newProfil)
@@ -45,14 +46,8 @@ function createProfil(sector, id, srcPicture, firstname, lastname, post) {
     name.innerHTML = `${firstname}<br>${lastname}`
     newProfil.appendChild(name)
 
-    let role = document.createElement("h3")
-    role.classList.add("profil-function")
-    role.innerHTML = post
-    newProfil.appendChild(role)
-
     let btnMore = document.createElement("button")
     btnMore.classList.add("profil-more")
-    // btnMore.classList.add("btn")
     btnMore.setAttribute("id", id)
     btnMore.textContent = "En savoir plus"
     newProfil.appendChild(btnMore)
@@ -60,13 +55,11 @@ function createProfil(sector, id, srcPicture, firstname, lastname, post) {
 
 function createProfilSection(section, array) {
     for (let i = 0; i < array.length; i++) {
-        createProfil(section, array[i].id, array[i].srcPicture, array[i].firstname, array[i].lastname, array[i].function)
+        createProfil(section, array[i].id, array[i].srcPicture, array[i].firstname, array[i].lastname)
     }
 }
 
 createProfilSection(directionContainer, directionProfil)
-createProfilSection(otherContainer, otherProfil)
-
 
 // AFFICHAGE CARD
 
