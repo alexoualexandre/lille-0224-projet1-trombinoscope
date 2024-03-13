@@ -1,21 +1,137 @@
 * {
     box-sizing: border-box;
-
+    margin: 0%;
+    padding: 0;
 }
 
 body {
     margin: 0px;
 }
 
-a {text-decoration: none;
-    color: inherit;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.container-button{
+header {
+    width: 100%;
+    position: relative;
+
+}
+
+.logo {
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    top: 5%;
+}
+
+.header_logo {
+    background-color: #FA006A;
+    width: 100%;
+    height: 25%;
+}
+
+.header-title {
+    padding: 0 5%;
+    margin: 2rem 0;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 1.5em;
+    font-family: arial;
+    margin-bottom: 1rem;
+}
+
+header p {
+    text-align: center;
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* ------------------------------ POPUP CARD ------------------------------ */
+
+.container-card {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #FA006A;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    display: none;
+    z-index: 999;
+}
+
+.card-profil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* border: #FFF 2px solid; */
+    color: #f43082;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    margin-top: 3rem;
+}
+
+.card-profil h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.card-profil span {
+    color: #000;
+}
+
+
+.picture-card img {
+    border: #FFF solid 3px;
+    border-radius: 50%;
+    margin-top: -6rem;
+    width: 11rem;
+}
+
+.lastjob-card,
+.hobbie-card {
+    font-style: italic;
+}
+
+.button-exit {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-top: 2rem;
+    font-weight: 600;
+}
+
+.button-exit:hover,
+.button-exit:focus {
+    background-color: #fff;
+}
+
+/* ------------------------------ BUTTON NAV ------------------------------ */
+
+.container-button {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 5%;
+    margin-bottom: 2rem;
 }
 
 .container-button button {
@@ -64,3 +180,72 @@ a {text-decoration: none;
   box-shadow: rgba(45, 35, 66, .3) 0 3px 7px inset;
   transform: translateY(2px);
 }
+
+.container-button .dev {
+    background-image: radial-gradient(100% 100% at 100% 0, #a306b6 0, #a306b6 100%);
+}
+.container-button .data {
+    background-image: radial-gradient(100% 100% at 100% 0, #2567ef 0, #2567ef 100%);
+}
+
+/* ------------------------------ SECTION TROMBINOSCOPE ------------------------------ */
+
+.container-profil {
+    position: relative;
+    background-color:#fa006a ;
+}
+
+.staff-profil {
+    width:100% ;
+    height:33.33%;
+}
+
+.img {
+    width:10em;
+    height: 10em;
+    margin-left: 27.5%;
+    margin-top: 8%;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.h1staff {
+    text-align: center;
+    color:white;
+}
+
+/* ------------------------------ FOOTER ------------------------------ */
+
+footer{
+    margin-block: 0.8rem;
+    margin-inline: 0.8rem;
+
+}
+
+.footer-title {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    font-family: arial;
+    margin-bottom: 0.5rem;
+}
+
+.social-logo {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 0.6rem;
+
+}
+
+.social-logo a{
+    border-radius: 20%;
+    background-color: #fa006a;
+}
+
+footer p {
+    display: flex;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 0.8rem;
+    justify-content: center;
+}
+

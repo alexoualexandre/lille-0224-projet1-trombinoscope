@@ -3,34 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Trombinoscope | Wild Code School</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <header>
-
+    <header>        
+        <div class="header_logo">
+            <img src="img/logoWild.png" alt="picture not found" class="logo">
+        </div>
+        <div class="header-title">
+            <h1>
+                Bienvenue sur le <br> trombinoscope
+            </h1>
+            <p>
+                Découvrez les membres du staff et les étudiants dev/data au sein de la wild code school de lille durant la
+                session 2024
+            </p>
+        </div>
     </header>
-
     <main>
+        <div class="container-card">
+            <div class="card-profil">
+                <div class="picture-card"><img src="img/profil.jpg" alt=""></div>
+                <h1 class="name-card">Alexis Estrine</h1>
+                <h3 class="age-card">25 ans</h3>
+                <h3 class="lastjob-card"><span>Ancien métier :</span> Cariste</h3>
+                <h3 class="hobbie-card"><span>Hobbie :</span> Cinéma</h3>
+            </div>
+            <div class="button-exit">X</div>
+        </div>
         <section class="container-button">
-            <button>
+            <button class="staff">
                 <img src="img/staff.svg" width="60px">
                 <a href="">Le Staff</a>
             </button>
-            <button>
+            <button class="dev">
                 <img src="img/dev.svg" width="60px">
                 <a href="">Les Dev's</a>
             </button>
-            <button>
+            <button class="data">
                 <img src="img/data.svg" width="60px">
                 <a href="">Les Data's</a>
             </button>
         </section>
+        <section class="container-profil">
+            <h1 class ="h1staff">
+               Le staff
+            </h1>  
+                   
+           <article class = "staff-profil">
+               <figure class = "imgfigure">
+                   <img src="Google_self_driving_car_at_the_Googleplex.jpg" class="img">
+               </figure>
+           </article>       
+           <article class = "staff-profil">
+               <figure class = "imgfigure">
+                   <img src="Google_self_driving_car_at_the_Googleplex.jpg" class="img">
+               </figure>
+           </article>        
+           <article class = "staff-profil">
+               <figure class = "imgfigure">
+                   <img src="Google_self_driving_car_at_the_Googleplex.jpg" class="img">
+               </figure>
+           </article>        
     </main>
 
     <footer>
+        <h2 class="footer-title">Born to be Wild !</h2>
+            <div class="social-logo">
+                <a href="Facebook">
+                    <img src="Logo footer/facebook.svg" width="30rem">
+                </a>
+                <a href="Instagram">
+                    <img src="Logo footer/instagram.svg" width="30rem">
+                </a>
+                <a href="Twitter">
+                    <img src="Logo footer/twitterx.svg" width="30rem">
+                </a> 
+            </div>
+        <p>© Created by Alexis - Mathieu - Alexandre - Sebastien</p>
+
 
     </footer>
 </body>
