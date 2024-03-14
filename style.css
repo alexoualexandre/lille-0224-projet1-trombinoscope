@@ -9,6 +9,12 @@ html {
 
 }
 
+.zeyada-regular {
+    font-family: "Zeyada", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
 body {
     margin: 0px;
     font-family: "Source Sans 3", sans-serif;
@@ -101,19 +107,21 @@ header {
 
 #button {
     position: fixed;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 3px;
     right: 0.5em;
     bottom: 0.5em;
-    width: 2em;
-    height: 2em;
-    font-size: 1.5em;
+    width: 2.5em;
+    height: 2.5em;
     border-radius: 50%;
-    border: 5px double black;
-    background-color: white;
-    color: black;
-    opacity: 0.7;
+
     display: none;
     animation-name: opacite;
     animation-duration: 2s;
+}
+
+#button:hover {
+    background-color: rgba(255, 255, 255, 1);
 }
 
 @keyframes opacite {
@@ -122,7 +130,7 @@ header {
     }
 
     to {
-        opacity: 0.7;
+        opacity: 1;
     }
 }
 
@@ -447,4 +455,51 @@ footer p {
     font-family: "Source Sans 3", sans-serif;
     font-size: 0.8rem;
     justify-content: center;
+}
+
+@media screen and (min-width:768px) {
+
+    .header-title {
+        padding: 0 5%;
+        text-align: center;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-title h1 {
+        text-align: center;
+        font-size: 3em;
+        margin-top: -1.5em;
+        font-family: "Zeyada", cursive;
+    }
+
+    .header-title p {
+        text-align: center;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 1.6em;
+        font-family: "Zeyada", cursive;
+    }
+
+    .container-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 5%;
+        margin-bottom: 2rem;
+        width: 50%;
+        justify-content: center;
+
+    }
+
+    .landing-page {
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: :center;
+    }
 }
