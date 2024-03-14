@@ -19,6 +19,11 @@ a {
     color: inherit;
 }
 
+.header-title a {
+    text-decoration: underline;
+    color: initial;
+}
+
 header {
     width: 100%;
     position: relative;
@@ -73,17 +78,18 @@ header {
 
 .header-title {
     padding: 0 5%;
-    margin: 2rem 0;
+    margin: 1rem 0;
+    text-align: center;
 }
 
-header h1 {
+.header-title h1 {
     text-align: center;
     font-size: 1.5em;
     font-family: arial;
     margin-bottom: 1rem;
 }
 
-header p {
+.header-title p {
     text-align: center;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -124,7 +130,8 @@ header p {
     top: 0;
     left: 0;
     right: 0;
-    background-color: #FA006A;
+    /* background-color: #FA006A; */
+    backdrop-filter: blur(10px);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -163,7 +170,7 @@ header p {
     margin: 0;
 }
 
-.picture-card img {
+.picture-card {
     border: #FFF solid 2px;
     border-radius: 10px;
     width: 200px;
@@ -251,6 +258,10 @@ header p {
   transform: translateY(2px);
 }
 
+.container-button a {
+    width: 100%;
+}
+
 .container-button .dev {
     background-image: radial-gradient(100% 100% at 100% 0, #a306b6 0, #a306b6 100%);
 }
@@ -261,10 +272,35 @@ header p {
 /* ------------------------------ SECTION TROMBINOSCOPE ------------------------------ */
 
 .staff {
-    position: relative;
-    background-color:#fa006a;
     padding: 1.5rem;
     text-align: center;
+}
+
+.staff#direction {
+    background-color:#fa006a;
+}
+
+.staff#direction .profil-more:not(:disabled) {
+    background-color:#FFF;
+    color: #1d1d1B;
+}
+
+.staff#dev {
+    background-color:#a306b6;
+}
+
+.staff#dev .profil-more:not(:disabled) {
+    background-color:#faf45E;
+    color: #1d1d1B;
+}
+
+.staff#data {
+    background-color:#2567ef;
+}
+
+.staff#data .profil-more:not(:disabled) {
+    background-color:#1d1d1B;
+    color: #FFF;
 }
 
 .title {
