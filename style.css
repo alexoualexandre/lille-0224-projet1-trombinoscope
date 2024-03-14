@@ -474,7 +474,6 @@ footer p {
         text-align: center;
         font-size: 3em;
         margin-top: -1.5em;
-        font-family: "Zeyada", cursive;
     }
 
     .header-title p {
@@ -483,7 +482,6 @@ footer p {
         font-weight: 500;
         font-style: normal;
         font-size: 1.6em;
-        font-family: "Zeyada", cursive;
     }
 
     .container-button {
@@ -501,7 +499,7 @@ footer p {
         height: 90vh;
         display: flex;
         justify-content: center;
-        align-items: :center;
+        align-items: center;
     }
   
       .title {
