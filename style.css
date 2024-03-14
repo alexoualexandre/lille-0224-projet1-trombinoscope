@@ -282,29 +282,29 @@ header {
 }
 
 .staff#direction {
-    background-color:#fa006a;
+    background-color: #fa006a;
 }
 
 .staff#direction .profil-more:not(:disabled) {
-    background-color:#FFF;
+    background-color: #FFF;
     color: #1d1d1B;
 }
 
 .staff#dev {
-    background-color:#a306b6;
+    background-color: #a306b6;
 }
 
 .staff#dev .profil-more:not(:disabled) {
-    background-color:#faf45E;
+    background-color: #faf45E;
     color: #1d1d1B;
 }
 
 .staff#data {
-    background-color:#2567ef;
+    background-color: #2567ef;
 }
 
 .staff#data .profil-more:not(:disabled) {
-    background-color:#1d1d1B;
+    background-color: #1d1d1B;
     color: #FFF;
 }
 
@@ -319,6 +319,21 @@ header {
     flex-direction: column;
     align-items: center;
 }
+
+.img {
+    width: 10em;
+    height: 10em;
+    margin-left: 27.5%;
+    margin-top: 8%;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.h1staff {
+    text-align: center;
+    color: white;
+}
+
 
 .profil {
     background-color: rgba(255, 255, 255, 0.6);
