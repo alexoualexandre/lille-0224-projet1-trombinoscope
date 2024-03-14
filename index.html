@@ -28,47 +28,61 @@
                 </ul>
             </div>
         </div>
-        <div class="header-title">
-            <h1>
-                Bienvenue sur le <br> trombinoscope
-            </h1>
-            <p>
-                Découvrez les membres du staff et les étudiants dev/data au sein de la wild code school de lille
-                durant
-                la
-                session 2024
-            </p>
-        </div>
     </header>
     <main>
         <div class="container-card">
             <div class="card-profil">
-                <div class="picture-card"><img src="img/profil.jpg" alt=""></div>
+                <div><img src="img/profil.jpg" alt="" class="picture-card"></div>
                 <h1 class="name-card">Alexis<br>Estrine</h1>
                 <h3 class="age-card">25 ans</h3>
-                <h3 class="lastjob-card">Ancien Cariste</h3>
+                <h3 class="function-card">Ancien Cariste</h3>
                 <h3 class="hobbie-card"><span>Hobbie : Cinéma </span></h3>
             </div>
             <div class="button-exit">X</div>
         </div>
+        <div class="header-title">
+            <h1>
+                Bienvenue sur le <br> trombinoscope 
+            </h1>
+            <p>
+                Découvrez les membres du staff et les étudiants en développement web et data analyst au sein de la Wild Code School de 
+                Lille durant la session 2024.
+                <br>Pour plus d'infos sur la WCS, <a href="https://www.wildcodeschool.com/fr-fr/">clique ici</a>.
+            </p>
+        </div>
         <section class="container-button">
-            <button class="staff-btn">
-                <img src="img/staff.svg" width="60px">
-                <a href="">Le Staff</a>
-            </button>
+            <a href="#direction">
+                <button class="staff-btn">
+                    <img src="img/staff.svg" width="60px">
+                    Le Staff    
+                </button>
+            </a>
+            <a href="#dev">
             <button class="dev">
                 <img src="img/dev.svg" width="60px">
-                <a href="">Les Dev's</a>
+                Les Dev's
             </button>
+            </a>
+            <a href="#data">
             <button class="data">
                 <img src="img/data.svg" width="60px">
-                <a href="">Les Data's</a>
+                Les Data's
             </button>
+            </a>
         </section>
-        <section class="staff">
-            <h1 class="title">Le staff</h1>
+        <section class="staff" id="direction">
+            <h1 class ="title">Le staff</h1>
             <div class="container-profil">
-
+            </div>
+        </section>   
+        <section class="staff" id="dev">
+            <h1 class ="title">Les dev's</h1>
+            <div class="container-profil">
+            </div>
+        </section>
+        <section class="staff" id="data">
+            <h1 class ="title">Les data's</h1>
+            <div class="container-profil">
             </div>
         </section>
         <button id="button"><a href="#top">&#x21ee;</a></button>
@@ -76,17 +90,17 @@
 
     <footer>
         <h2 class="footer-title">Born to be Wild !</h2>
-        <div class="social-logo">
-            <a href="Facebook">
-                <img src="img/facebook.svg" width="30rem">
-            </a>
-            <a href="Instagram">
-                <img src="img/instagram.svg" width="30rem">
-            </a>
-            <a href="Twitter">
-                <img src="img/twitterx.svg" width="30rem">
-            </a>
-        </div>
+            <div class="social-logo">
+                <a href="https://www.facebook.com/WildCodeSchool/">
+                    <img src="img/facebook.svg" width="30rem">
+                </a>
+                <a href="https://www.instagram.com/wildcodeschoolofficial/?hl=fr">
+                    <img src="img/instagram.svg" width="30rem">
+                </a>
+                <a href="https://twitter.com/WildCodeSchool">
+                    <img src="img/twitterx.svg" width="30rem">
+                </a> 
+            </div>
         <p>© Created by Alexis - Mathieu - Alexandre - Sebastien</p>
     </footer>
 </body>
