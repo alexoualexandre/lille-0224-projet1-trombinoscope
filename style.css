@@ -9,10 +9,10 @@ html {
 
 }
 
-.zeyada-regular {
-    font-family: "Zeyada", cursive;
+@font-face {
+	font-family: 'Virgil';
     font-weight: 400;
-    font-style: normal;
+	src: url("fonts/Virgil.woff2") format("woff2")
 }
 
 body {
@@ -89,12 +89,12 @@ header {
     padding: 0 5%;
     margin: 1rem 0;
     text-align: center;
+    font-family: 'Virgil', sans-serif;
 }
 
 .header-title h1 {
     text-align: center;
     font-size: 1.5em;
-    font-family: arial;
     margin-bottom: 1rem;
 }
 
@@ -205,6 +205,7 @@ header {
     border-radius: 50%;
     margin-top: 2rem;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .button-exit:hover,
@@ -502,4 +503,25 @@ footer p {
         justify-content: center;
         align-items: :center;
     }
+  
+      .title {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .staff {
+        padding: 3rem;
+    }
+
+    .container-profil {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .profil {
+        margin-left: 0.75rem;
+        margin-right: 0.75rem;
+    }
+  
 }
