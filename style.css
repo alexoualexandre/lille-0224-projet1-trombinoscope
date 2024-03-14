@@ -107,19 +107,21 @@ header {
 
 #button {
     position: fixed;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 3px;
     right: 0.5em;
     bottom: 0.5em;
-    width: 2em;
-    height: 2em;
-    font-size: 1.5em;
+    width: 2.5em;
+    height: 2.5em;
     border-radius: 50%;
-    border: 5px double black;
-    background-color: white;
-    color: black;
-    opacity: 0.7;
+
     display: none;
     animation-name: opacite;
     animation-duration: 2s;
+}
+
+#button:hover {
+    background-color: rgba(255, 255, 255, 1);
 }
 
 @keyframes opacite {
@@ -128,7 +130,7 @@ header {
     }
 
     to {
-        opacity: 0.7;
+        opacity: 1;
     }
 }
 
@@ -289,29 +291,29 @@ header {
 }
 
 .staff#direction {
-    background-color:#fa006a;
+    background-color: #fa006a;
 }
 
 .staff#direction .profil-more:not(:disabled) {
-    background-color:#FFF;
+    background-color: #FFF;
     color: #1d1d1B;
 }
 
 .staff#dev {
-    background-color:#a306b6;
+    background-color: #a306b6;
 }
 
 .staff#dev .profil-more:not(:disabled) {
-    background-color:#faf45E;
+    background-color: #faf45E;
     color: #1d1d1B;
 }
 
 .staff#data {
-    background-color:#2567ef;
+    background-color: #2567ef;
 }
 
 .staff#data .profil-more:not(:disabled) {
-    background-color:#1d1d1B;
+    background-color: #1d1d1B;
     color: #FFF;
 }
 
@@ -326,6 +328,21 @@ header {
     flex-direction: column;
     align-items: center;
 }
+
+.img {
+    width: 10em;
+    height: 10em;
+    margin-left: 27.5%;
+    margin-top: 8%;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.h1staff {
+    text-align: center;
+    color: white;
+}
+
 
 .profil {
     background-color: rgba(255, 255, 255, 0.6);
@@ -441,8 +458,53 @@ footer p {
     justify-content: center;
 }
 
-@media screen and (min-width : 768px) {
-    .title {
+@media screen and (min-width:768px) {
+
+    .header-title {
+        padding: 0 5%;
+        text-align: center;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-title h1 {
+        text-align: center;
+        font-size: 3em;
+        margin-top: -1.5em;
+        font-family: "Zeyada", cursive;
+    }
+
+    .header-title p {
+        text-align: center;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 1.6em;
+        font-family: "Zeyada", cursive;
+    }
+
+    .container-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 5%;
+        margin-bottom: 2rem;
+        width: 50%;
+        justify-content: center;
+
+    }
+
+    .landing-page {
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: :center;
+    }
+  
+      .title {
         font-size: 3rem;
         margin-bottom: 3rem;
     }
@@ -461,4 +523,5 @@ footer p {
         margin-left: 0.75rem;
         margin-right: 0.75rem;
     }
+  
 }
