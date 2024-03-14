@@ -18,30 +18,30 @@ let dataContainer = document.querySelector("#data .container-profil")
 
 
 let directionProfil = [
-    {id: "0", sexe:"m", srcPicture: "img/profil0.jpg", firstname: "Tom", lastname: "Monteil", function: "Owner", age: "30", hobbie: "Cinéma"},
-    {id: "1", sexe:"f", srcPicture: "img/profil1.jpg", firstname: "Sophie", lastname: "Delacroix", function: "Co-Owner", age: "30", hobbie: "Cinéma"},
-    {id: "2", sexe:"m", srcPicture: "img/profil2.jpg", firstname: "Pierrick", lastname: "Choffard", function: "CEO", age: "30", hobbie: "Cinéma"},
-    {id: "3", sexe:"m", srcPicture: "img/profil3.jpg", firstname: "Hugo", lastname: "Girardot", function: "Director", age: "30", hobbie: "Cinéma"}
+    { id: "0", sexe: "m", srcPicture: "img/profil0.jpg", firstname: "Tom", lastname: "Monteil", function: "Owner", age: "30", hobbie: "Cinéma" },
+    { id: "1", sexe: "f", srcPicture: "img/profil1.jpg", firstname: "Sophie", lastname: "Delacroix", function: "Co-Owner", age: "30", hobbie: "Cinéma" },
+    { id: "2", sexe: "m", srcPicture: "img/profil2.jpg", firstname: "Pierrick", lastname: "Choffard", function: "CEO", age: "30", hobbie: "Cinéma" },
+    { id: "3", sexe: "m", srcPicture: "img/profil3.jpg", firstname: "Hugo", lastname: "Girardot", function: "Director", age: "30", hobbie: "Cinéma" }
 ]
 
 let devProfil = [
-    {id: "0", sexe:"f", srcPicture: "img/profil4.jpg", firstname: "Linda", lastname: "Chagnon", function: "Personnel Manager", age: "30", hobbie: "Cinéma"},
-    {id: "1", sexe:"m", srcPicture: "img/profil5.jpg", firstname: "William", lastname: "Chandonnet", function: "Finance Manager", age: "30", hobbie: "Cinéma"},
-    {id: "2", sexe:"f", srcPicture: "img/profil6.jpg", firstname: "Sarah", lastname: "Hardouin", function: "Marketing Manager", age: "30", hobbie: "Cinéma"},
-    {id: "3", sexe:"m", srcPicture: "img/profil7.jpg", firstname: "Romain", lastname: "Garcia", function: "Purchasing Manager", age: "30", hobbie: "Cinéma"},
-    {id: "4", sexe:"f", srcPicture: "img/profil8.jpg", firstname: "Ane", lastname: "Lapierre", function: "Production Manager", age: "30", hobbie: "Cinéma"},
-    {id: "5", sexe:"f", srcPicture: "img/profil9.jpg", firstname: "Lisa", lastname: "Melanson", function: "Sales Manager", age: "30", hobbie: "Cinéma"},
-    {id: "6", sexe:"m", srcPicture: "img/profil10.jpg", firstname: "Vincent", lastname: "Truchon", function: "R&D Manager", age: "30", hobbie: "Cinéma"}
+    { id: "0", sexe: "f", srcPicture: "img/profil4.jpg", firstname: "Linda", lastname: "Chagnon", function: "Personnel Manager", age: "30", hobbie: "Cinéma" },
+    { id: "1", sexe: "m", srcPicture: "img/profil5.jpg", firstname: "William", lastname: "Chandonnet", function: "Finance Manager", age: "30", hobbie: "Cinéma" },
+    { id: "2", sexe: "f", srcPicture: "img/profil6.jpg", firstname: "Sarah", lastname: "Hardouin", function: "Marketing Manager", age: "30", hobbie: "Cinéma" },
+    { id: "3", sexe: "m", srcPicture: "img/profil7.jpg", firstname: "Romain", lastname: "Garcia", function: "Purchasing Manager", age: "30", hobbie: "Cinéma" },
+    { id: "4", sexe: "f", srcPicture: "img/profil8.jpg", firstname: "Ane", lastname: "Lapierre", function: "Production Manager", age: "30", hobbie: "Cinéma" },
+    { id: "5", sexe: "f", srcPicture: "img/profil9.jpg", firstname: "Lisa", lastname: "Melanson", function: "Sales Manager", age: "30", hobbie: "Cinéma" },
+    { id: "6", sexe: "m", srcPicture: "img/profil10.jpg", firstname: "Vincent", lastname: "Truchon", function: "R&D Manager", age: "30", hobbie: "Cinéma" }
 ]
 
 let dataProfil = [
-    {id: "0", sexe:"f", srcPicture: "img/profil4.jpg", firstname: "Linda", lastname: "Chagnon", function: "Personnel Manager", age: "30", hobbie: "Cinéma"},
-    {id: "1", sexe:"m", srcPicture: "img/profil5.jpg", firstname: "William", lastname: "Chandonnet", function: "Finance Manager", age: "30", hobbie: "Cinéma"},
-    {id: "2", sexe:"f", srcPicture: "img/profil6.jpg", firstname: "Sarah", lastname: "Hardouin", function: "Marketing Manager", age: "30", hobbie: "Cinéma"},
-    {id: "3", sexe:"m", srcPicture: "img/profil7.jpg", firstname: "Romain", lastname: "Garcia", function: "Purchasing Manager", age: "30", hobbie: "Cinéma"},
-    {id: "4", sexe:"f", srcPicture: "img/profil8.jpg", firstname: "Ane", lastname: "Lapierre", function: "Production Manager", age: "30", hobbie: "Cinéma"},
-    {id: "5", sexe:"f", srcPicture: "img/profil9.jpg", firstname: "Lisa", lastname: "Melanson", function: "Sales Manager", age: "30", hobbie: "Cinéma"},
-    {id: "6", sexe:"m", srcPicture: "img/profil10.jpg", firstname: "Vincent", lastname: "Truchon", function: "R&D Manager", age: "30", hobbie: "Cinéma"}
+    { id: "0", sexe: "f", srcPicture: "img/profil4.jpg", firstname: "Linda", lastname: "Chagnon", function: "Personnel Manager", age: "30", hobbie: "Cinéma" },
+    { id: "1", sexe: "m", srcPicture: "img/profil5.jpg", firstname: "William", lastname: "Chandonnet", function: "Finance Manager", age: "30", hobbie: "Cinéma" },
+    { id: "2", sexe: "f", srcPicture: "img/profil6.jpg", firstname: "Sarah", lastname: "Hardouin", function: "Marketing Manager", age: "30", hobbie: "Cinéma" },
+    { id: "3", sexe: "m", srcPicture: "img/profil7.jpg", firstname: "Romain", lastname: "Garcia", function: "Purchasing Manager", age: "30", hobbie: "Cinéma" },
+    { id: "4", sexe: "f", srcPicture: "img/profil8.jpg", firstname: "Ane", lastname: "Lapierre", function: "Production Manager", age: "30", hobbie: "Cinéma" },
+    { id: "5", sexe: "f", srcPicture: "img/profil9.jpg", firstname: "Lisa", lastname: "Melanson", function: "Sales Manager", age: "30", hobbie: "Cinéma" },
+    { id: "6", sexe: "m", srcPicture: "img/profil10.jpg", firstname: "Vincent", lastname: "Truchon", function: "R&D Manager", age: "30", hobbie: "Cinéma" }
 ]
 
 function createProfil(sector, id, srcPicture, firstname, lastname) {
@@ -51,7 +51,7 @@ function createProfil(sector, id, srcPicture, firstname, lastname) {
 
     let picture = document.createElement("img")
     picture.classList.add("profil-picture")
-    picture.src = srcPicture   
+    picture.src = srcPicture
     newProfil.appendChild(picture)
 
     let name = document.createElement("h2")
@@ -100,7 +100,7 @@ function searchProfil(profil, array) {
     cardAge.innerHTML = `${result.age} ans`
     cardFunction.innerHTML = result.sexe === "m" ? `Ancien ${result.function}` : `Ancienne ${result.function}`
     cardHobbie.innerHTML = `Hobbie : ${result.hobbie}`
-  }
+}
 
 for (let btn of btnMoreDirection) {
     btn.addEventListener("click", () => {
