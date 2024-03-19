@@ -437,6 +437,7 @@ footer {
     font-size: 1rem;
     font-family: arial;
     margin-bottom: 0.5rem;
+    font-family: 'Virgil', sans-serif;
 }
 
 .social-logo {
@@ -449,6 +450,8 @@ footer {
 .social-logo a {
     border-radius: 20%;
     background-color: #fa006a;
+    height: 30px;
+
 }
 
 footer p {
@@ -521,5 +524,40 @@ footer p {
         margin-left: 0.75rem;
         margin-right: 0.75rem;
     }
-  
+
+    footer {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    .footer-title {
+        display: flex;
+        justify-content: left;
+        font-size: 1.2rem;
+        font-family: arial;
+        margin-bottom: 0.5rem;
+        font-family: 'Virgil', sans-serif;
+    }
+    
+    .social-logo {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 0.6rem;
+        width: 20%;
+        margin-right: 40%;
+        margin-left: 40%;
+    }
+
+    .social-logo a {
+        border-radius: 20%;
+        background-color: #fa006a;
+        height: 30px;
+    }
+
+    footer p {
+        display: flex;
+        font-family: "Source Sans 3", sans-serif;
+        font-size: 0.8rem;
+        justify-content: right;
+    }
 }
