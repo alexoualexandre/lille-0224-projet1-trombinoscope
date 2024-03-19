@@ -90,6 +90,7 @@ header {
     margin: 1rem 0;
     text-align: center;
     font-family: 'Virgil', sans-serif;
+    line-height: 1.5;
 }
 
 .header-title h1 {
@@ -141,7 +142,6 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    /* background-color: #FA006A; */
     backdrop-filter: blur(10px);
     height: 100%;
     display: flex;
@@ -151,6 +151,18 @@ header {
     padding: 2rem;
     display: none;
     z-index: 999;
+    animation-name: blur;
+    animation-duration: 2s;
+    -webkit-perspective: 500;
+}
+
+@keyframes blur {
+    from {
+        backdrop-filter: blur(0px);
+    }
+    to {
+        backdrop-filter: blur(10px);
+    }
 }
 
 .card-profil {
@@ -159,13 +171,24 @@ header {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    width: 300px;
-    height: 450px;
+    min-width: 300px;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.8);
     color: #000;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     padding: 1.5rem;
+    padding-bottom: 1rem;
+    animation-name: rotationStart;
+    animation-duration: 1s;
+}
+
+@keyframes rotationStart {
+    from {
+        transform: rotateY(90deg);
+    }
+    to {
+        transform: rotateY(0deg);
+    }
 }
 
 .card-profil h3 {
@@ -188,10 +211,32 @@ header {
     height: 200px;
 }
 
+.movePicture:hover {
+    animation-name: movePicture;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
 .lastjob-card,
 .hobbie-card {
     font-style: italic;
     margin: 0;
+}
+
+.social-card img {
+    width: 50px;
+    height: 50px;
+    margin: 0.5rem;
+    transition: all 0.3s;
+}
+
+.social-card img:hover {
+    opacity: 0.8;
+}
+
+.github,
+.linkedin {
+    display: none;
 }
 
 .button-exit {
@@ -211,6 +256,18 @@ header {
 .button-exit:hover,
 .button-exit:focus {
     background-color: #fff;
+}
+
+@keyframes movePicture {
+    from {
+        transform: rotate(-30deg) scale(1);
+    }
+    50% {
+        transform: rotate(30deg) scale(1.2);
+    }
+    100% {
+        transform: rotate(-30deg) scale(1);
+    }
 }
 
 /* ------------------------------ BUTTON NAV ------------------------------ */
@@ -288,6 +345,10 @@ header {
     background-color: #fa006a;
     padding: 1.5rem;
     text-align: center;
+}
+
+.staff h1 {
+    font-family: 'Virgil', sans-serif;
 }
 
 .staff#direction {
@@ -452,10 +513,18 @@ footer {
 }
 
 footer p {
-    display: flex;
     font-family: "Source Sans 3", sans-serif;
     font-size: 0.8rem;
-    justify-content: center;
+    text-align: center;
+}
+
+footer span {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+footer span:hover {
+    color: #FA006A;
 }
 
 @media screen and (min-width:768px) {
@@ -473,7 +542,8 @@ footer p {
     .header-title h1 {
         text-align: center;
         font-size: 3em;
-        margin-top: -1.5em;
+        margin-top: -0.5rem;
+        margin-bottom: 1.5rem;
     }
 
     .header-title p {
@@ -489,7 +559,7 @@ footer p {
         flex-direction: column;
         align-items: center;
         padding: 0 5%;
-        margin-bottom: 2rem;
+        margin-bottom: 0rem;
         width: 50%;
         justify-content: center;
 
