@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="https://www.wildcodeschool.com/hubfs/markentive/favicons/global/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Zeyada&display=swap" rel="stylesheet">
-    <script src="script.js" defer></script>
+    <script type="module" src="script.js" defer></script>
 </head>
 
 <body>
@@ -33,11 +33,15 @@
     <main>
         <div class="container-card">
             <div class="card-profil">
-                <div><img src="img/profil.jpg" alt="" class="picture-card"></div>
-                <h1 class="name-card">Alexis<br>Estrine</h1>
-                <h3 class="age-card">25 ans</h3>
-                <h3 class="function-card">Ancien Cariste</h3>
-                <h3 class="hobbie-card"><span>Hobbie : Cinéma </span></h3>
+                <div class="picture-card-container"><img src="" alt="" class="picture-card"></div>
+                <h1 class="name-card"></h1>
+                <h3 class="age-card"></h3>
+                <h3 class="function-card"></h3>
+                <h3 class="hobbie-card"></h3>
+                <div class="social-card">
+                    <a href="" class="github"><img src="img/github.png" alt=""></a>
+                    <a href="" class="linkedin"><img src="img/linkedin.png" alt=""></a>
+                </div>
             </div>
             <div class="button-exit">X</div>
         </div>
@@ -90,7 +94,7 @@
             <div class="container-profil">
             </div>
         </section>
-        <div id="button"><a href="#top"><img src="img/icons8-up-64.png" style="width:100%;height:100%;"></a></div>
+        <div id="button"><a href="#top"><img src="img/up.png" style="width:100%;height:100%;"></a></div>
     </main>
 
     <footer>
@@ -106,7 +110,7 @@
                 <img src="img/twitterx.svg" width="30rem">
             </a>
         </div>
-        <p>© Created by Alexis - Mathieu - Alexandre - Sebastien</p>
+        <p>© Created by <span id="0">Alexis</span> - <span id="0">Mathieu</span> - <span id="0">Alexandre</span> - <span id="11">Sebastien</span></p>
     </footer>
 </body>
 
