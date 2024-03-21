@@ -12,10 +12,22 @@ let cardFunction = document.querySelector(".function-card");
 let cardHobbie = document.querySelector(".hobbie-card");
 let cardGithub = document.querySelector(".github");
 let cardLinkedin = document.querySelector(".linkedin");
+let cardCreator = document.querySelector(".creator")
 
 let directionContainer = document.querySelector("#direction .container-profil");
 let devContainer = document.querySelector("#dev .container-profil");
 let dataContainer = document.querySelector("#data .container-profil");
+
+let logo = document.querySelector(".img-logo-W");
+
+logo.addEventListener("mouseover", () => {
+    logo.src = "img/logo-anim.gif"
+})
+
+logo.addEventListener("click", () => {
+    logo.src = "img/logo-anim.gif"
+})
+
 
 
 createProfilSection(profileArray);
@@ -45,7 +57,7 @@ function createProfil(sector, id, srcPicture, firstname, lastname) {
 
     let name = document.createElement("h2");
     name.classList.add("profil-name");
-    name.innerHTML = `${firstname}<br>${lastname}`;
+    name.innerHTML = `${firstname}<br>${lastname.toUpperCase()}`;
     newProfil.appendChild(name);
 
     let btnMore = document.createElement("button");
@@ -80,16 +92,17 @@ function searchProfil(id, profileArray) {
     }
     cardContainer.style.display = "flex";
     cardPicture.style.display = 'block';
+    cardCreator.style.display = result.creator ? "block" : "none";
     cardPicture.src = `${result.srcPicture}.jpg`;
-    cardName.innerHTML = `${result.firstname}<br>${result.lastname}`;
+    cardName.innerHTML = `${result.firstname}<br>${result.lastname.toUpperCase()}`;
     cardAge.innerHTML = `${result.age} ans`;
-    cardFunction.innerHTML = result.sexe === "m" ? `Ancien ${result.function}` : `Ancienne ${result.function}`;
+    cardFunction.innerHTML = result.direction ? `${result.function}` : (result.sexe === "m" ? `Ancien ${result.function}` : `Ancienne ${result.function}`);
     cardHobbie.innerHTML = `Hobbie : ${result.hobbie}`;
     cardGithub.href = result.github;
     cardGithub.style.display = !result.github ? "none" : "inline-block";
     cardLinkedin.href = result.linkedin;
     cardLinkedin.style.display = !result.linkedin ? "none" : "inline-block";
-    if(id === "4") {
+    if(id === "4" || id === "8") {
         const numberOfImages = pictureCardContainer.children.length;
         cardPicture.style.display = 'none';
         if(numberOfImages === 1) {
@@ -118,6 +131,11 @@ function searchProfil(id, profileArray) {
     }
 }
 
+for (let btn of btnMoreCreator) {
+    btn.addEventListener("click", () => {
+        searchProfil(btn.id, profileArray)
+    })
+}
 
 btnExit.onclick = function () {
     cardContainer.style.display = "none";
