@@ -6,7 +6,6 @@
 
 html {
     scroll-behavior: smooth;
-
 }
 
 @font-face {
@@ -42,13 +41,15 @@ header {
     top: 5%;
 }
 
-.header_logo {
-    background-color: #FA006A;
+.header-logo {
+    background-color: #000000;
     width: 100%;
     height: 25%;
     display: flex;
     flex-direction: row;
     padding-bottom: 1em;
+    align-items: center;
+    justify-content: center;
 
 }
 
@@ -72,7 +73,6 @@ header {
     height: 100%;
     display: flex;
     justify-content: left;
-
 }
 
 .flex-txt ul {
@@ -115,7 +115,6 @@ header {
     width: 2.5em;
     height: 2.5em;
     border-radius: 50%;
-
     display: none;
     animation-name: opacite;
     animation-duration: 2s;
@@ -204,11 +203,18 @@ header {
     margin: 0;
 }
 
+h3.creator {
+    color: #FA006A;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    display: none;
+}
+
 .picture-card {
     border: #FFF solid 2px;
     border-radius: 10px;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
 }
 
 .movePicture:hover {
@@ -251,6 +257,7 @@ header {
     margin-top: 2rem;
     font-weight: 600;
     cursor: pointer;
+    flex: none;
 }
 
 .button-exit:hover,
@@ -291,7 +298,6 @@ header {
     color: #fff;
     cursor: pointer;
     display: inline-flex;
-    font-family: "JetBrains Mono", monospace;
     height: 5rem;
     width: 100%;
     justify-content: space-evenly;
@@ -310,6 +316,8 @@ header {
     font-size: 30px;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
+    font-family: 'Virgil';
+    font-weight: 700;
 }
 
 .container-button button:focus {
@@ -334,6 +342,12 @@ header {
     background-image: radial-gradient(100% 100% at 100% 0, #a306b6 0, #a306b6 100%);
 }
 
+.dev img,
+.data img,
+.staff-btn img {
+    width: 60px;
+}
+
 .container-button .data {
     background-image: radial-gradient(100% 100% at 100% 0, #2567ef 0, #2567ef 100%);
 }
@@ -347,7 +361,7 @@ header {
     text-align: center;
 }
 
-.staff h1 {
+.staff h2.title {
     font-family: 'Virgil', sans-serif;
 }
 
@@ -371,6 +385,7 @@ header {
 
 .staff#data {
     background-color: #2567ef;
+
 }
 
 .staff#data .profil-more:not(:disabled) {
@@ -436,7 +451,6 @@ header {
     color: #fff;
     cursor: pointer;
     display: inline-flex;
-    font-family: Roboto, sans-serif;
     font-size: .875rem;
     font-weight: 500;
     height: 36px;
@@ -496,7 +510,6 @@ footer {
     display: flex;
     justify-content: center;
     font-size: 1rem;
-    font-family: arial;
     margin-bottom: 0.5rem;
     font-family: 'Virgil', sans-serif;
 }
@@ -511,12 +524,19 @@ footer {
 .social-logo a {
     border-radius: 20%;
     background-color: #fa006a;
-    height: 30px;
+    height: 24px;
+}
 
+.social-logo a:hover {
+    transform: scale(1.1);
+    transition: scale 0.5s;
+}
+
+.social-logo img {
+    width: 1.5rem;
 }
 
 footer p {
-    font-family: "Source Sans 3", sans-serif;
     font-size: 0.8rem;
     text-align: center;
 }
@@ -533,8 +553,6 @@ footer span:hover {
 @media screen and (min-width:768px) {
 
     .header-title {
-        padding: 0 5%;
-        text-align: center;
         width: 50%;
         display: flex;
         flex-direction: column;
@@ -543,25 +561,16 @@ footer span:hover {
     }
 
     .header-title h1 {
-        text-align: center;
         font-size: 3em;
         margin-top: -0.5rem;
         margin-bottom: 1.5rem;
     }
 
     .header-title p {
-        text-align: center;
-        font-optical-sizing: auto;
-        font-weight: 500;
-        font-style: normal;
         font-size: 1.6em;
     }
 
     .container-button {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0 5%;
         margin-bottom: 0rem;
         width: 50%;
         justify-content: center;
@@ -575,7 +584,7 @@ footer span:hover {
         align-items: center;
     }
   
-      .title {
+    .title {
         font-size: 3rem;
         margin-bottom: 3rem;
     }
@@ -601,33 +610,26 @@ footer span:hover {
     }
 
     .footer-title {
-        display: flex;
         justify-content: left;
         font-size: 1.2rem;
-        font-family: arial;
-        margin-bottom: 0.5rem;
-        font-family: 'Virgil', sans-serif;
     }
     
     .social-logo {
-        display: flex;
         justify-content: space-around;
-        margin-bottom: 0.6rem;
         width: 20%;
         margin-right: 40%;
         margin-left: 40%;
     }
 
     .social-logo a {
-        border-radius: 20%;
-        background-color: #fa006a;
-        height: 30px;
+        height: 32px;
+    }
+
+    .social-logo img {
+        width: 2rem;
     }
 
     footer p {
-        display: flex;
-        font-family: "Source Sans 3", sans-serif;
-        font-size: 0.8rem;
-        justify-content: right;
+        text-align: right;
     }
 }
