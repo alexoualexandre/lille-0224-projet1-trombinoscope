@@ -152,7 +152,6 @@ header {
     z-index: 999;
     animation-name: blur;
     animation-duration: 2s;
-    -webkit-perspective: 500;
 }
 
 @keyframes blur {
