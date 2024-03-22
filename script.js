@@ -1,4 +1,108 @@
-import profileArray from './profileArray.json' assert { type: 'json' };
+// import profileArray from './profileArray.json' assert { type: 'json' };
+
+fetch('./profileArray.json')
+  .then(response => response.json())
+  .then(profileArray => {
+    // Appelle la fonction avec les données JSON une fois qu'elles sont disponibles
+    
+    function createProfil(sector, id, srcPicture, firstname, lastname) {
+        let newProfil = document.createElement("div");
+        newProfil.classList.add("profil");
+        sector.appendChild(newProfil);
+    
+        let picture = document.createElement("img");
+        picture.classList.add("profil-picture");
+        picture.src = `${srcPicture}.jpg`;
+        newProfil.appendChild(picture);
+    
+        let name = document.createElement("h2");
+        name.classList.add("profil-name");
+        name.innerHTML = `${firstname}<br>${lastname.toUpperCase()}`;
+        newProfil.appendChild(name);
+    
+        let btnMore = document.createElement("button");
+        btnMore.classList.add("profil-more");
+        btnMore.textContent = "En savoir plus";
+        btnMore.addEventListener('click', () => {
+            searchProfil(id, profileArray);
+        });
+        newProfil.appendChild(btnMore);
+    }
+    
+    function createProfilSection(profileArray) {
+        profileArray.map((profile) => {
+            if(profile.dev){
+                createProfil(devContainer, profile.id, profile.srcPicture, profile.firstname, profile.lastname);
+            } else if (profile.direction) {
+                createProfil(directionContainer, profile.id, profile.srcPicture, profile.firstname, profile.lastname);
+            } else if (profile.data) {
+                createProfil(dataContainer, profile.id, profile.srcPicture, profile.firstname, profile.lastname);
+            }
+        });
+    }
+    
+    
+    function searchProfil(id, profileArray) {
+        const result = profileArray.find((profil) => profil.id === id);
+        const pictureCardContainer = document.querySelector('.picture-card-container');
+        const numberOfImages = pictureCardContainer.children.length;
+        if(numberOfImages === 2) {
+            const looserImageRef = document.querySelector('.looser-image');
+            looserImageRef.style.display = 'none';
+        }
+        cardContainer.style.display = "flex";
+        cardPicture.style.display = 'block';
+        cardCreator.style.display = result.creator ? "block" : "none";
+        cardPicture.src = `${result.srcPicture}.jpg`;
+        cardName.innerHTML = `${result.firstname}<br>${result.lastname.toUpperCase()}`;
+        cardAge.innerHTML = `${result.age} ans`;
+        cardFunction.innerHTML = result.direction ? `${result.function}` : (result.sexe === "m" ? `Ancien ${result.function}` : `Ancienne ${result.function}`);
+        cardHobbie.innerHTML = `Hobbie : ${result.hobbie}`;
+        cardGithub.href = result.github;
+        cardGithub.style.display = !result.github ? "none" : "inline-block";
+        cardLinkedin.href = result.linkedin;
+        cardLinkedin.style.display = !result.linkedin ? "none" : "inline-block";
+        if(id === "4" || id === "8") {
+            const numberOfImages = pictureCardContainer.children.length;
+            cardPicture.style.display = 'none';
+            if(numberOfImages === 1) {
+                let looserImage = document.createElement("img");
+                looserImage.classList.add('looser-image');
+                looserImage.classList.add('picture-card');
+                pictureCardContainer.appendChild(looserImage);
+                const looserImageRef = document.querySelector('.looser-image');
+                looserImageRef.src = `${result.srcPicture}.jpg`;
+                let music = document.createElement("div");
+                looserImageRef.addEventListener("mouseover", () => {
+                    music.innerHTML = `<audio src="test.mp3" autoplay="true"></audio>`;
+                    looserImageRef.src = `${result.srcPicture}bis.jpg`;
+                    looserImageRef.classList.add("movePicture");
+                    cardContainer.appendChild(music);
+                })
+                looserImageRef.addEventListener("mouseleave", () => {
+                    looserImageRef.src = `${result.srcPicture}.jpg`;
+                    looserImageRef.classList.remove("movePicture");
+                    cardContainer.removeChild(music);
+                })
+            } else if (numberOfImages === 2) {
+                const looserImageRef = document.querySelector('.looser-image');
+                looserImageRef.style.display = 'block';
+            }
+        }
+    }
+    
+    createProfilSection(profileArray);
+
+    for (let btn of btnMoreCreator) {
+        btn.addEventListener("click", () => {
+            searchProfil(btn.id, profileArray)
+        })
+    }
+
+  })
+  .catch(error => {
+    console.error('Erreur lors de la récupération du fichier JSON :', error);
+  });
 
 let button = document.getElementById('button');
 let btnMoreCreator = document.querySelectorAll("footer span");
@@ -30,7 +134,7 @@ logo.addEventListener("click", () => {
 
 
 
-createProfilSection(profileArray);
+// createProfilSection(profileArray);
 
 
 setInterval(function () {
@@ -45,97 +149,97 @@ setInterval(function () {
 }, 10);
 
 
-function createProfil(sector, id, srcPicture, firstname, lastname) {
-    let newProfil = document.createElement("div");
-    newProfil.classList.add("profil");
-    sector.appendChild(newProfil);
+// function createProfil(sector, id, srcPicture, firstname, lastname) {
+//     let newProfil = document.createElement("div");
+//     newProfil.classList.add("profil");
+//     sector.appendChild(newProfil);
 
-    let picture = document.createElement("img");
-    picture.classList.add("profil-picture");
-    picture.src = `${srcPicture}.jpg`;
-    newProfil.appendChild(picture);
+//     let picture = document.createElement("img");
+//     picture.classList.add("profil-picture");
+//     picture.src = `${srcPicture}.jpg`;
+//     newProfil.appendChild(picture);
 
-    let name = document.createElement("h2");
-    name.classList.add("profil-name");
-    name.innerHTML = `${firstname}<br>${lastname.toUpperCase()}`;
-    newProfil.appendChild(name);
+//     let name = document.createElement("h2");
+//     name.classList.add("profil-name");
+//     name.innerHTML = `${firstname}<br>${lastname.toUpperCase()}`;
+//     newProfil.appendChild(name);
 
-    let btnMore = document.createElement("button");
-    btnMore.classList.add("profil-more");
-    btnMore.textContent = "En savoir plus";
-    btnMore.addEventListener('click', () => {
-        searchProfil(id, profileArray);
-    });
-    newProfil.appendChild(btnMore);
-}
+//     let btnMore = document.createElement("button");
+//     btnMore.classList.add("profil-more");
+//     btnMore.textContent = "En savoir plus";
+//     btnMore.addEventListener('click', () => {
+//         searchProfil(id, profileArray);
+//     });
+//     newProfil.appendChild(btnMore);
+// }
 
-function createProfilSection(profileArray) {
-    profileArray.map((profile) => {
-        if(profile.dev){
-            createProfil(devContainer, profile.id, profile.srcPicture, profile.firstname, profile.lastname);
-        } else if (profile.direction) {
-            createProfil(directionContainer, profile.id, profile.srcPicture, profile.firstname, profile.lastname);
-        } else if (profile.data) {
-            createProfil(dataContainer, profile.id, profile.srcPicture, profile.firstname, profile.lastname);
-        }
-    });
-}
+// function createProfilSection(profileArray) {
+//     profileArray.map((profile) => {
+//         if(profile.dev){
+//             createProfil(devContainer, profile.id, profile.srcPicture, profile.firstname, profile.lastname);
+//         } else if (profile.direction) {
+//             createProfil(directionContainer, profile.id, profile.srcPicture, profile.firstname, profile.lastname);
+//         } else if (profile.data) {
+//             createProfil(dataContainer, profile.id, profile.srcPicture, profile.firstname, profile.lastname);
+//         }
+//     });
+// }
 
 
-function searchProfil(id, profileArray) {
-    const result = profileArray.find((profil) => profil.id === id);
-    const pictureCardContainer = document.querySelector('.picture-card-container');
-    const numberOfImages = pictureCardContainer.children.length;
-    if(numberOfImages === 2) {
-        const looserImageRef = document.querySelector('.looser-image');
-        looserImageRef.style.display = 'none';
-    }
-    cardContainer.style.display = "flex";
-    cardPicture.style.display = 'block';
-    cardCreator.style.display = result.creator ? "block" : "none";
-    cardPicture.src = `${result.srcPicture}.jpg`;
-    cardName.innerHTML = `${result.firstname}<br>${result.lastname.toUpperCase()}`;
-    cardAge.innerHTML = `${result.age} ans`;
-    cardFunction.innerHTML = result.direction ? `${result.function}` : (result.sexe === "m" ? `Ancien ${result.function}` : `Ancienne ${result.function}`);
-    cardHobbie.innerHTML = `Hobbie : ${result.hobbie}`;
-    cardGithub.href = result.github;
-    cardGithub.style.display = !result.github ? "none" : "inline-block";
-    cardLinkedin.href = result.linkedin;
-    cardLinkedin.style.display = !result.linkedin ? "none" : "inline-block";
-    if(id === "4" || id === "8") {
-        const numberOfImages = pictureCardContainer.children.length;
-        cardPicture.style.display = 'none';
-        if(numberOfImages === 1) {
-            let looserImage = document.createElement("img");
-            looserImage.classList.add('looser-image');
-            looserImage.classList.add('picture-card');
-            pictureCardContainer.appendChild(looserImage);
-            const looserImageRef = document.querySelector('.looser-image');
-            looserImageRef.src = `${result.srcPicture}.jpg`;
-            let music = document.createElement("div");
-            looserImageRef.addEventListener("mouseover", () => {
-                music.innerHTML = `<audio src="test.mp3" autoplay="true"></audio>`;
-                looserImageRef.src = `${result.srcPicture}bis.jpg`;
-                looserImageRef.classList.add("movePicture");
-                cardContainer.appendChild(music);
-            })
-            looserImageRef.addEventListener("mouseleave", () => {
-                looserImageRef.src = `${result.srcPicture}.jpg`;
-                looserImageRef.classList.remove("movePicture");
-                cardContainer.removeChild(music);
-            })
-        } else if (numberOfImages === 2) {
-            const looserImageRef = document.querySelector('.looser-image');
-            looserImageRef.style.display = 'block';
-        }
-    }
-}
+// function searchProfil(id, profileArray) {
+//     const result = profileArray.find((profil) => profil.id === id);
+//     const pictureCardContainer = document.querySelector('.picture-card-container');
+//     const numberOfImages = pictureCardContainer.children.length;
+//     if(numberOfImages === 2) {
+//         const looserImageRef = document.querySelector('.looser-image');
+//         looserImageRef.style.display = 'none';
+//     }
+//     cardContainer.style.display = "flex";
+//     cardPicture.style.display = 'block';
+//     cardCreator.style.display = result.creator ? "block" : "none";
+//     cardPicture.src = `${result.srcPicture}.jpg`;
+//     cardName.innerHTML = `${result.firstname}<br>${result.lastname.toUpperCase()}`;
+//     cardAge.innerHTML = `${result.age} ans`;
+//     cardFunction.innerHTML = result.direction ? `${result.function}` : (result.sexe === "m" ? `Ancien ${result.function}` : `Ancienne ${result.function}`);
+//     cardHobbie.innerHTML = `Hobbie : ${result.hobbie}`;
+//     cardGithub.href = result.github;
+//     cardGithub.style.display = !result.github ? "none" : "inline-block";
+//     cardLinkedin.href = result.linkedin;
+//     cardLinkedin.style.display = !result.linkedin ? "none" : "inline-block";
+//     if(id === "4" || id === "8") {
+//         const numberOfImages = pictureCardContainer.children.length;
+//         cardPicture.style.display = 'none';
+//         if(numberOfImages === 1) {
+//             let looserImage = document.createElement("img");
+//             looserImage.classList.add('looser-image');
+//             looserImage.classList.add('picture-card');
+//             pictureCardContainer.appendChild(looserImage);
+//             const looserImageRef = document.querySelector('.looser-image');
+//             looserImageRef.src = `${result.srcPicture}.jpg`;
+//             let music = document.createElement("div");
+//             looserImageRef.addEventListener("mouseover", () => {
+//                 music.innerHTML = `<audio src="test.mp3" autoplay="true"></audio>`;
+//                 looserImageRef.src = `${result.srcPicture}bis.jpg`;
+//                 looserImageRef.classList.add("movePicture");
+//                 cardContainer.appendChild(music);
+//             })
+//             looserImageRef.addEventListener("mouseleave", () => {
+//                 looserImageRef.src = `${result.srcPicture}.jpg`;
+//                 looserImageRef.classList.remove("movePicture");
+//                 cardContainer.removeChild(music);
+//             })
+//         } else if (numberOfImages === 2) {
+//             const looserImageRef = document.querySelector('.looser-image');
+//             looserImageRef.style.display = 'block';
+//         }
+//     }
+// }
 
-for (let btn of btnMoreCreator) {
-    btn.addEventListener("click", () => {
-        searchProfil(btn.id, profileArray)
-    })
-}
+// for (let btn of btnMoreCreator) {
+//     btn.addEventListener("click", () => {
+//         searchProfil(btn.id, profileArray)
+//     })
+// }
 
 btnExit.onclick = function () {
     cardContainer.style.display = "none";
