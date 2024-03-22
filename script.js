@@ -1,4 +1,4 @@
-import profileArray from "./profileArray.json" assert { type: "json" };
+import profileArray from './profileArray.json' assert { type: 'json' };
 
 let button = document.getElementById('button');
 let btnMoreCreator = document.querySelectorAll("footer span");
